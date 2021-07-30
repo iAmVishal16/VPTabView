@@ -14,6 +14,7 @@
 		D350133726B405EA0019F279 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D350133626B405EA0019F279 /* ContentView.swift */; };
 		D350133926B405EC0019F279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D350133826B405EC0019F279 /* Assets.xcassets */; };
 		D350133C26B405EC0019F279 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D350133B26B405EC0019F279 /* Preview Assets.xcassets */; };
+		D350134226B40EC60019F279 /* VPTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D350134126B40EC60019F279 /* VPTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		D350133826B405EC0019F279 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D350133B26B405EC0019F279 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D350133D26B405EC0019F279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D350134126B40EC60019F279 /* VPTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			children = (
 				D350131726B404DD0019F279 /* VPTabView.h */,
 				D350131826B404DD0019F279 /* Info.plist */,
+				D350134126B40EC60019F279 /* VPTabView.swift */,
 			);
 			path = VPTabView;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				TargetAttributes = {
 					D350131326B404DD0019F279 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					D350131C26B404DD0019F279 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -263,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D350134226B40EC60019F279 /* VPTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +424,7 @@
 		D350132926B404DD0019F279 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -426,6 +432,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = VPTabView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -434,6 +441,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = iamvishal16.VPTabView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -442,6 +451,7 @@
 		D350132A26B404DD0019F279 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -449,6 +459,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = VPTabView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,6 +468,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = iamvishal16.VPTabView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -465,6 +477,7 @@
 		D350132C26B404DD0019F279 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = VPTabViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -482,6 +495,7 @@
 		D350132D26B404DD0019F279 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = VPTabViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -505,7 +519,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"VPTabViewDemo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = VPTabViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -526,7 +540,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"VPTabViewDemo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = VPTabViewDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
