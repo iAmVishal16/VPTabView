@@ -10,6 +10,10 @@
 		D350131E26B404DD0019F279 /* VPTabView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D350131426B404DD0019F279 /* VPTabView.framework */; };
 		D350132326B404DD0019F279 /* VPTabViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D350132226B404DD0019F279 /* VPTabViewTests.swift */; };
 		D350132526B404DD0019F279 /* VPTabView.h in Headers */ = {isa = PBXBuildFile; fileRef = D350131726B404DD0019F279 /* VPTabView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D350133526B405EA0019F279 /* VPTabViewDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D350133426B405EA0019F279 /* VPTabViewDemoApp.swift */; };
+		D350133726B405EA0019F279 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D350133626B405EA0019F279 /* ContentView.swift */; };
+		D350133926B405EC0019F279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D350133826B405EC0019F279 /* Assets.xcassets */; };
+		D350133C26B405EC0019F279 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D350133B26B405EC0019F279 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,12 @@
 		D350131D26B404DD0019F279 /* VPTabViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VPTabViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D350132226B404DD0019F279 /* VPTabViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPTabViewTests.swift; sourceTree = "<group>"; };
 		D350132426B404DD0019F279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D350133226B405EA0019F279 /* VPTabViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPTabViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D350133426B405EA0019F279 /* VPTabViewDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPTabViewDemoApp.swift; sourceTree = "<group>"; };
+		D350133626B405EA0019F279 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D350133826B405EC0019F279 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D350133B26B405EC0019F279 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D350133D26B405EC0019F279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +57,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D350132F26B405EA0019F279 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -55,6 +72,7 @@
 			children = (
 				D350131626B404DD0019F279 /* VPTabView */,
 				D350132126B404DD0019F279 /* VPTabViewTests */,
+				D350133326B405EA0019F279 /* VPTabViewDemo */,
 				D350131526B404DD0019F279 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +82,7 @@
 			children = (
 				D350131426B404DD0019F279 /* VPTabView.framework */,
 				D350131D26B404DD0019F279 /* VPTabViewTests.xctest */,
+				D350133226B405EA0019F279 /* VPTabViewDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +103,26 @@
 				D350132426B404DD0019F279 /* Info.plist */,
 			);
 			path = VPTabViewTests;
+			sourceTree = "<group>";
+		};
+		D350133326B405EA0019F279 /* VPTabViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D350133426B405EA0019F279 /* VPTabViewDemoApp.swift */,
+				D350133626B405EA0019F279 /* ContentView.swift */,
+				D350133826B405EC0019F279 /* Assets.xcassets */,
+				D350133D26B405EC0019F279 /* Info.plist */,
+				D350133A26B405EC0019F279 /* Preview Content */,
+			);
+			path = VPTabViewDemo;
+			sourceTree = "<group>";
+		};
+		D350133A26B405EC0019F279 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D350133B26B405EC0019F279 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +175,23 @@
 			productReference = D350131D26B404DD0019F279 /* VPTabViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D350133126B405EA0019F279 /* VPTabViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D350133E26B405EC0019F279 /* Build configuration list for PBXNativeTarget "VPTabViewDemo" */;
+			buildPhases = (
+				D350132E26B405EA0019F279 /* Sources */,
+				D350132F26B405EA0019F279 /* Frameworks */,
+				D350133026B405EA0019F279 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VPTabViewDemo;
+			productName = VPTabViewDemo;
+			productReference = D350133226B405EA0019F279 /* VPTabViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -149,6 +205,9 @@
 						CreatedOnToolsVersion = 12.5.1;
 					};
 					D350131C26B404DD0019F279 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					D350133126B405EA0019F279 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
@@ -168,6 +227,7 @@
 			targets = (
 				D350131326B404DD0019F279 /* VPTabView */,
 				D350131C26B404DD0019F279 /* VPTabViewTests */,
+				D350133126B405EA0019F279 /* VPTabViewDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -187,6 +247,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D350133026B405EA0019F279 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D350133C26B405EC0019F279 /* Preview Assets.xcassets in Resources */,
+				D350133926B405EC0019F279 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -202,6 +271,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D350132326B404DD0019F279 /* VPTabViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D350132E26B405EA0019F279 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D350133726B405EA0019F279 /* ContentView.swift in Sources */,
+				D350133526B405EA0019F279 /* VPTabViewDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +496,48 @@
 			};
 			name = Release;
 		};
+		D350133F26B405EC0019F279 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"VPTabViewDemo/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = VPTabViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iamvishal16.VPTabViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D350134026B405EC0019F279 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"VPTabViewDemo/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = VPTabViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = iamvishal16.VPTabViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -444,6 +564,15 @@
 			buildConfigurations = (
 				D350132C26B404DD0019F279 /* Debug */,
 				D350132D26B404DD0019F279 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D350133E26B405EC0019F279 /* Build configuration list for PBXNativeTarget "VPTabViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D350133F26B405EC0019F279 /* Debug */,
+				D350134026B405EC0019F279 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
