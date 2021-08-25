@@ -13,9 +13,9 @@ struct ContentView: View {
     
     var body: some View {
         VPTabView<AnyView>(icons: images) {
-            ProfileView()
-            BookmarksView()
-            SettingsView()
+            HomeView()
+            FavoriteView()
+            NotificationsView()
             UserView()
         }
     }
@@ -27,59 +27,53 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct ProfileView: View {
+struct HomeView: View {
     
     var body: some View {
-        NavigationView {
-            List {
-                Button("Bookmarks") {
-                    print("Switch to Bookmarks Tab")
-                }
-                Button("Settings") {
-                    print("Switch to Settings Tab")
-                }
+        VStack {
+            Spacer()
+            HStack (alignment: .center) {
+                Spacer()
+                Text("Home Secreen")
+                    .font(.headline)
+                    .multilineTextAlignment(.center)
+                Spacer()
             }
-            .listStyle(InsetGroupedListStyle())
-            .navigationTitle("Profile")
-            .navigationBarTitleDisplayMode(.inline)
+            Spacer()
         }
     }
 }
 
-struct BookmarksView: View {
+struct FavoriteView: View {
     
     var body: some View {
-        NavigationView {
-            List {
-                //                NavigationLink() {
-                //                    Text("ICE")
-                //                }
-                Button("Settings") {
-                    print("Switch to Settings Tab")
-                }
+        VStack {
+            Spacer()
+            HStack (alignment: .center) {
+                Spacer()
+                Text("Favorite Secreen")
+                    .font(.headline)
+                    .multilineTextAlignment(.center)
+                Spacer()
             }
-            .listStyle(InsetGroupedListStyle())
-            .navigationTitle("Bookmarks")
-            .navigationBarTitleDisplayMode(.inline)
+            Spacer()
         }
     }
 }
 
-struct SettingsView: View {
+struct NotificationsView: View {
     
     var body: some View {
-        NavigationView {
-            List {
-                Button("Profile") {
-                    print("Switch to Profile View")
-                }
-                Button("Bookmarks") {
-                    print("Switch to Bookmarsk View")
-                }
+        VStack {
+            Spacer()
+            HStack (alignment: .center) {
+                Spacer()
+                Text("Notification Secreen")
+                    .font(.headline)
+                    .multilineTextAlignment(.center)
+                Spacer()
             }
-            .listStyle(InsetGroupedListStyle())
-            .navigationTitle("Settings")
-            .navigationBarTitleDisplayMode(.inline)
+            Spacer()
         }
     }
 }
@@ -88,8 +82,15 @@ struct UserView: View {
     
     var body: some View {
         VStack {
-            Image("girl1")
-                .resizable()
+            Spacer()
+            HStack (alignment: .center) {
+                Spacer()
+                Text("Profile Secreen")
+                    .font(.headline)
+                    .multilineTextAlignment(.center)
+                Spacer()
+            }
+            Spacer()
         }
     }
 }
