@@ -39,6 +39,8 @@ struct HomeView: View {
                     .multilineTextAlignment(.center)
                 Spacer()
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.white)
             Spacer()
         }
     }
@@ -56,6 +58,8 @@ struct FavoriteView: View {
                     .multilineTextAlignment(.center)
                 Spacer()
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.white)
             Spacer()
         }
     }
@@ -73,6 +77,8 @@ struct NotificationsView: View {
                     .multilineTextAlignment(.center)
                 Spacer()
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.white)
             Spacer()
         }
     }
@@ -90,6 +96,8 @@ struct UserView: View {
                     .multilineTextAlignment(.center)
                 Spacer()
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.white)
             Spacer()
         }
     }

@@ -44,7 +44,7 @@ public struct VPTabView<Content> : View where Content : View {
                 ZStack {
                     self.views[self.index]
                 }
-                .frame(width: gReader.size.width, alignment: .leading)
+                .frame(width: gReader.size.width, height: gReader.size.height, alignment: .leading)
                 .gesture(
                     DragGesture()
                         .updating(self.$translation) { gestureValue, gestureState, _ in
