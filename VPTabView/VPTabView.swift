@@ -44,7 +44,7 @@ public struct VPTabView<Content> : View where Content : View {
                 ZStack {
                     self.views[self.index]
                 }
-                .frame(width: gReader.size.width, height: gReader.size.height, alignment: .leading)
+                .frame(width: gReader.size.width, alignment: .leading)
                 .gesture(
                     DragGesture()
                         .updating(self.$translation) { gestureValue, gestureState, _ in
@@ -56,13 +56,14 @@ public struct VPTabView<Content> : View where Content : View {
                             self.index = min(max(Int(newIndex), 0), self.icons.count - 1)
                         }
                 )
-                HStack {
+                HStack(alignment: .center) {
                     
                     Spacer()
                     
-                    ForEach(0..<self.icons.count) { index in
+                    ForEach(0..<self.icons.count, id: \.self) { index in
                         VPTabItem(index: self.$index, tag: index, imageName: self.icons[index])
                     }
+                    .padding(.bottom, 16)
                     
                     if fabStyle == .end {
                         Spacer()
@@ -73,7 +74,8 @@ public struct VPTabView<Content> : View where Content : View {
                     Spacer()
                     
                 }
-                .frame(height: 56)
+                .frame(height: 60)
+                .padding(.bottom, gReader.safeAreaInsets.bottom)
                 .background(background)
                 
                 
@@ -127,7 +129,7 @@ struct VPTabItem: View {
         let itemColor = self.index == tag ? Color.accentColor : .gray
         let itemImage = self.index == tag ? imageName.fill : imageName
         
-        VStack {
+        VStack(alignment: .center) {
             Image(systemName: itemImage)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -155,9 +157,9 @@ struct VPFloatingActionButton: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 18 , height: 18)
-                .foregroundColor(Color.white)
+                .foregroundColor(Color.black)
         }
-        .offset(y: -56/2)
+        .offset(y: -60/2)
     }
 }
 

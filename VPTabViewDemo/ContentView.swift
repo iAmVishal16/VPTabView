@@ -18,6 +18,7 @@ struct ContentView: View {
             NotificationsView()
             UserView()
         }
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 
@@ -29,18 +30,32 @@ struct ContentView_Previews: PreviewProvider {
 
 struct HomeView: View {
     
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         VStack {
             Spacer()
             HStack (alignment: .center) {
                 Spacer()
-                Text("Home Secreen")
-                    .font(.headline)
-                    .multilineTextAlignment(.center)
+                VStack(spacing: 16) {
+                    Image(systemName: "chart.bar.xaxis.ascending.badge.clock")
+                        .renderingMode(.original)
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                        .foregroundColor(.gray.opacity(0.4))
+                        .accentColor(.blue)
+                    Text("Buy or Sell More!")
+                        .font(.headline)
+                        .multilineTextAlignment(.center)
+                    Text("Here your stastics will be shown. sell some more products!")
+                        .font(.body)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.gray)
+                }
                 Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.white)
+            .background(colorScheme == .dark ? .black : Color.white)
             Spacer()
         }
     }
@@ -48,18 +63,30 @@ struct HomeView: View {
 
 struct FavoriteView: View {
     
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some View {
         VStack {
             Spacer()
             HStack (alignment: .center) {
                 Spacer()
-                Text("Favorite Secreen")
-                    .font(.headline)
-                    .multilineTextAlignment(.center)
+                VStack(spacing: 16) {
+                    Image(systemName: "heart.fill")
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                        .foregroundColor(.gray.opacity(0.4))
+                    Text("Wishlist is empty!")
+                        .font(.headline)
+                        .multilineTextAlignment(.center)
+                    Text("Pump up that heart button, to view your favourite topics.")
+                        .font(.body)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.gray)
+                }
                 Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.white)
+            .background(colorScheme == .dark ? .black : Color.white)
             Spacer()
         }
     }
@@ -67,18 +94,32 @@ struct FavoriteView: View {
 
 struct NotificationsView: View {
     
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some View {
         VStack {
             Spacer()
             HStack (alignment: .center) {
                 Spacer()
-                Text("Notification Secreen")
-                    .font(.headline)
-                    .multilineTextAlignment(.center)
+                VStack(spacing: 16) {
+                    Image(systemName: "bell.fill")
+                        .renderingMode(.template)
+                        .resizable()
+                        .frame(width: 86, height: 100)
+                        .foregroundColor(.gray.opacity(0.4))
+//                        .accentColor(.blue)
+                    Text("No Notifications Yet!")
+                        .font(.headline)
+                        .multilineTextAlignment(.center)
+                    Text("You'll get notified for any new updates, sell, order.")
+                        .font(.body)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.gray)
+                }
                 Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.white)
+            .background(colorScheme == .dark ? .black : Color.white)
             Spacer()
         }
     }
@@ -86,18 +127,33 @@ struct NotificationsView: View {
 
 struct UserView: View {
     
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some View {
         VStack {
             Spacer()
             HStack (alignment: .center) {
                 Spacer()
-                Text("Profile Secreen")
-                    .font(.headline)
-                    .multilineTextAlignment(.center)
+                VStack(spacing: 16) {
+                    Image(systemName: "person.line.dotted.person.fill")
+                        .renderingMode(.original)
+                        .resizable()
+                        .frame(width: 100, height: 46)
+                        .foregroundColor(.gray.opacity(0.4))
+                        .accentColor(.blue)
+                    Text("User Management!")
+                        .font(.headline)
+                        .multilineTextAlignment(.center)
+                    Text("You can manage user. add, edit, view and delete users profiles")
+                        .font(.body)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.gray)
+                        .padding([.leading, .trailing], 16)
+                }
                 Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.white)
+            .background(colorScheme == .dark ? .black : Color.white)
             Spacer()
         }
     }

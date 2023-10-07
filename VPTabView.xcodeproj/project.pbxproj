@@ -15,6 +15,8 @@
 		D350133926B405EC0019F279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D350133826B405EC0019F279 /* Assets.xcassets */; };
 		D350133C26B405EC0019F279 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D350133B26B405EC0019F279 /* Preview Assets.xcassets */; };
 		D350134226B40EC60019F279 /* VPTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D350134126B40EC60019F279 /* VPTabView.swift */; };
+		D3AAE6BD2AD180EF0014E0F9 /* VPTabView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D350131426B404DD0019F279 /* VPTabView.framework */; };
+		D3AAE6BE2AD180EF0014E0F9 /* VPTabView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D350131426B404DD0019F279 /* VPTabView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +27,28 @@
 			remoteGlobalIDString = D350131326B404DD0019F279;
 			remoteInfo = VPTabView;
 		};
+		D3AAE6BF2AD180EF0014E0F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D350130B26B404DD0019F279 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D350131326B404DD0019F279;
+			remoteInfo = VPTabView;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D3AAE6C12AD180EF0014E0F9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D3AAE6BE2AD180EF0014E0F9 /* VPTabView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D350131426B404DD0019F279 /* VPTabView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VPTabView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3AAE6BD2AD180EF0014E0F9 /* VPTabView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +100,7 @@
 				D350132126B404DD0019F279 /* VPTabViewTests */,
 				D350133326B405EA0019F279 /* VPTabViewDemo */,
 				D350131526B404DD0019F279 /* Products */,
+				D3AAE6BC2AD180EF0014E0F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +151,13 @@
 				D350133B26B405EC0019F279 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D3AAE6BC2AD180EF0014E0F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,10 +217,12 @@
 				D350132E26B405EA0019F279 /* Sources */,
 				D350132F26B405EA0019F279 /* Frameworks */,
 				D350133026B405EA0019F279 /* Resources */,
+				D3AAE6C12AD180EF0014E0F9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D3AAE6C02AD180EF0014E0F9 /* PBXTargetDependency */,
 			);
 			name = VPTabViewDemo;
 			productName = VPTabViewDemo;
@@ -295,6 +329,11 @@
 			isa = PBXTargetDependency;
 			target = D350131326B404DD0019F279 /* VPTabView */;
 			targetProxy = D350131F26B404DD0019F279 /* PBXContainerItemProxy */;
+		};
+		D3AAE6C02AD180EF0014E0F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D350131326B404DD0019F279 /* VPTabView */;
+			targetProxy = D3AAE6BF2AD180EF0014E0F9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -518,6 +557,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_ASSET_PATHS = "\"VPTabViewDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = H5N428TQC2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = VPTabViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -540,6 +580,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_ASSET_PATHS = "\"VPTabViewDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = H5N428TQC2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = VPTabViewDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
